@@ -3,6 +3,8 @@ import fs from 'fs';
 import os from 'os';
 import {v4 as uuidv4} from 'uuid';
 
+const deletePathTmp = () =>{};
+
 const createPathTemp = (filename: string, extension: string) =>{
   try {
     const randomDirPath = `ffmpeg-output-${uuidv4()}`;
@@ -12,7 +14,8 @@ const createPathTemp = (filename: string, extension: string) =>{
       fs.mkdirSync(dirPath);
     }
 
-    const fileName = path.basename(filename, extension);
+    const extName = path.extname(filename);
+    const fileName = path.basename(filename, extName);
 
     const pathTemp = `${path.join(dirPath, fileName )}.${extension}`;
 
