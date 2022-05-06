@@ -1,7 +1,8 @@
 {
   "scripts": {
     "tsc": "tsc",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "app": "nodemon src/internalapp/index.ts"
   },
   "engines": {
     "node": ">=16.0.0 <=16.16.0"
