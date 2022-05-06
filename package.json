@@ -20,11 +20,13 @@
   },
   "dependencies": {
     "@types/mongoose": "^5.11.97",
+    "@types/uuid": "^8.3.4",
     "dotenv": "^16.0.0",
     "mongoose": "^6.3.2",
     "morgan": "^1.10.0",
     "restify": "^8.6.1",
     "restify-cors-middleware2": "^2.1.2",
-    "restify-router": "^0.6.2"
+    "restify-router": "^0.6.2",
+    "uuid": "^8.3.2"
   }
 }

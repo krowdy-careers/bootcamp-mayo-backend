@@ -65,9 +65,21 @@ class PROFILEMONGOMETHODS {
     manager.firstName = 'Le cambio de nombre';
     await manager.save();
 
-    // lo que estoy retornando es un objeto que permite castear fn de Mongo
     return manager;
   }
+
+  // update fns
+  async updateManagerById() {}
+  async updateManagerByField() {}
+  async updateManagerByAnyField() {}
+  async updateMultipleManagersByField() {}
+  async updateMultipleManagersByMultipleFields() {}
+
+  // create fns
+
+  async createElementWithSave() {}
+  async createElementWithCreate() {}
+  async createElementWithInsertMany() {}
 }
 
 // TO DO
