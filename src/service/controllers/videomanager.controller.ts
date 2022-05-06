@@ -70,6 +70,10 @@ class PROFILEMONGOMETHODS {
   }
 }
 
+// TO DO
+// operaciones de actualizacion
+// operaciones de eliminado
+// operaciones bulk
 
 const profileMethodsController = new PROFILEMONGOMETHODS();
 
