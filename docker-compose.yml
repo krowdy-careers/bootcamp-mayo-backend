@@ -8,3 +8,5 @@ services:
      environment:
        MONGO_INITDB_ROOT_USERNAME: krowdy
        MONGO_INITDB_ROOT_PASSWORD: krowdy
+
+## para ejecutar: docker-compose up -d
