@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable new-cap */
 
-import {createPathTemp} from './utils.controller';
 import {spawn} from 'child_process';
 import {videoStatusController} from './videostatus.controller';
 
