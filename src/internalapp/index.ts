@@ -9,7 +9,7 @@ const sendDataToOS = (inputVideoSource: string) => {
   const inputVideoSrc = `${__dirname}/${inputVideoSource}`;
   const outputVideoSrc = createPathTemp(inputVideoSource, 'mp4');
 
-  const principalCommand = 'ffmpeg';
+  const principalCommand = 'ffprobe';
   const args = [
     '-fflags',
     '+genpts',
