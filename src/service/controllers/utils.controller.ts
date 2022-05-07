@@ -5,6 +5,8 @@ import {v4 as uuidv4} from 'uuid';
 
 const deletePathTmp = () =>{};
 
+const uploadNewFileToStorage = () => {};
+
 const createPathTemp = (filename: string, extension: string) =>{
   try {
     const randomDirPath = `ffmpeg-output-${uuidv4()}`;

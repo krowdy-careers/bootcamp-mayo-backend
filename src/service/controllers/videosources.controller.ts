@@ -6,11 +6,15 @@ import path from 'path';
 import {createPathTemp} from './utils.controller';
 
 class VIDEOSOURCE {
-  async createVideoSource(pathInputVideo, context) {
+  async createVideoSource(pathInputVideo: string, context: any) {
     try {
-      const [fileName, extension] = pathInputVideo.split('.');
-
       const extensionFile = path.extname(pathInputVideo);
+
+      const extName = path.extname(pathInputVideo);
+      const fileName = path.basename(pathInputVideo, extName);
+
+      const outputdir = createPathTemp(fileName, 'mp4');
+      console.log('🚀 ~ file: videosources.controller.ts ~ line 17 ~ VIDEOSOURCE ~ createVideoSource ~ outputdir', outputdir);
 
       const newVideoSource = {
         fileName: fileName,
@@ -18,12 +22,14 @@ class VIDEOSOURCE {
         targetExtension: '.mp4',
         fileSources: {
           origin: pathInputVideo,
-          output: `${fileName}.mp4`,
-          tmp: createPathTemp(fileName, '.mp4'),
+          output: outputdir,
+          tmp: outputdir,
         },
+        createdBy: context.userId,
       };
 
       const videoSourceController = await VideoSourceModel.create(newVideoSource);
+      return videoSourceController;
     } catch (error) {
       throw error;
     }

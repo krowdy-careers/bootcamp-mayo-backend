@@ -4,6 +4,8 @@ import {videoDB} from '../index';
 const {Schema, Types} = mongoose;
 
 const VideoSourceSchema = new Schema({
+  originExtension: {type: String},
+  targetExtension: {type: String},
   fileName: {type: String},
   fileSources: {
     origin: {type: String},
